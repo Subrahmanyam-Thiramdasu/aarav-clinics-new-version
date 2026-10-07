@@ -1,0 +1,212 @@
+/* =====================================================
+   AARAV CLINICS — Layout Utilities
+   Theme: WARM MEDICAL LUXURY
+   ===================================================== */
+
+/* ── Wrapper ─────────────────────────────────────── */
+.wrap {
+  max-width: var(--wrap-max);
+  margin-inline: auto;
+  padding-inline: var(--wrap-padding);
+}
+
+.wrap--narrow {
+  max-width: var(--wrap-narrow);
+  margin-inline: auto;
+  padding-inline: var(--wrap-padding);
+}
+
+.wrap--wide {
+  max-width: var(--wrap-wide);
+  margin-inline: auto;
+  padding-inline: var(--wrap-padding);
+}
+
+/* ── Section base ────────────────────────────────── */
+.section {
+  padding-block: clamp(4rem, 7vw, 7rem);
+  position: relative;
+}
+
+.section--sm {
+  padding-block: clamp(2.5rem, 4vw, 4rem);
+}
+
+.section--lg {
+  padding-block: clamp(5rem, 9vw, 9rem);
+}
+
+/* ── Section surface variants ────────────────────── */
+.section--white   { background: var(--white); }
+.section--ivory   { background: var(--ivory); }
+.section--sage    { background: var(--sage-pale); }
+.section--sand    { background: var(--sand-light); }
+.section--forest  { background: var(--forest-dark); color: var(--text-inverse); }
+
+/* Compatibility aliases */
+.section--surface { background: var(--ivory); }
+.section--aqua    { background: var(--sage-pale); }
+.section--navy    { background: var(--forest-dark); color: var(--text-inverse); }
+
+/* ── Section header ──────────────────────────────── */
+.section-head {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.section-head--left {
+  text-align: left;
+  margin-inline: 0;
+}
+
+.section-title {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--text-heading);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-5);
+  font-family: var(--font-display);
+}
+
+.section--forest .section-title,
+.section--navy .section-title,
+.section--forest .lead,
+.section--navy .lead {
+  color: var(--white);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--forest);
+  padding: 0.35rem 0.85rem;
+  background: var(--sage-pale);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  font-family: var(--font-display);
+}
+
+.eyebrow--inverse {
+  color: var(--champagne);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(198, 164, 106, 0.30);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  line-height: var(--leading-normal);
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+/* ── Grids ───────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* ── Split layout ────────────────────────────────── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.split--60-40 {
+  grid-template-columns: 6fr 4fr;
+}
+
+.split--40-60 {
+  grid-template-columns: 4fr 6fr;
+}
+
+.split--reverse {
+  direction: rtl;
+}
+
+.split--reverse > * {
+  direction: ltr;
+}
+
+/* ── Flex utilities ──────────────────────────────── */
+.flex           { display: flex; }
+.flex-col       { display: flex; flex-direction: column; }
+.items-center   { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-4          { gap: var(--space-4); }
+.gap-6          { gap: var(--space-6); }
+.gap-8          { gap: var(--space-8); }
+
+/* ── Text alignment ──────────────────────────────── */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+
+/* ── Glass effect ────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.60);
+}
+
+/* ── Divider ─────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border-light);
+  margin-block: var(--space-8);
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .split,
+  .split--60-40,
+  .split--40-60 {
+    grid-template-columns: 1fr;
+  }
+
+  .split--reverse {
+    direction: ltr;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .section-head { text-align: left; margin-inline: 0; }
+  .lead { margin-inline: 0; }
+}
+
+@media (max-width: 480px) {
+  .grid-4 { grid-template-columns: 1fr; }
+}

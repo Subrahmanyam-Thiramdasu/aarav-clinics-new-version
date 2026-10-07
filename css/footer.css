@@ -1,0 +1,262 @@
+/* =====================================================
+   AARAV CLINICS — Footer
+   Theme: WARM MEDICAL LUXURY
+   ===================================================== */
+
+.site-footer {
+  background: var(--forest-dark);
+  color: rgba(255, 255, 255, 0.70);
+  padding-top: clamp(4rem, 7vw, 6rem);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.6fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Brand column ────────────────────────────────── */
+.footer-brand .brand-logo {
+  height: 52px;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+  margin-bottom: var(--space-4);
+}
+
+.footer-brand-statement {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--champagne);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.footer-brand p {
+  font-size: var(--text-sm);
+  line-height: var(--leading-loose);
+  color: rgba(255, 255, 255, 0.60);
+  margin-bottom: var(--space-5);
+  max-width: 320px;
+}
+
+.footer-contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-contact-links a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color var(--dur-fast), transform var(--dur-fast);
+}
+
+.footer-contact-links a:hover {
+  color: var(--champagne);
+  transform: translateX(3px);
+}
+
+.footer-contact-links a svg {
+  flex-shrink: 0;
+  color: var(--sage);
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Nav columns ─────────────────────────────────── */
+.footer-col h4 {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+  position: relative;
+  padding-bottom: var(--space-2);
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--champagne);
+  border-radius: var(--radius-full);
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.footer-col ul li a {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  transition: color var(--dur-fast), padding-left var(--dur-fast);
+  display: inline-block;
+}
+
+.footer-col ul li a:hover {
+  color: var(--champagne);
+  padding-left: 4px;
+}
+
+/* ── Hours block ─────────────────────────────────── */
+.footer-hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.footer-hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-hours-row span:first-child {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.footer-hours-row span:last-child {
+  color: rgba(255, 255, 255, 0.90);
+  font-weight: 500;
+}
+
+/* Social links */
+.footer-social-title {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.70);
+  margin-bottom: var(--space-2);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition:
+    background var(--dur-fast),
+    border-color var(--dur-fast),
+    color var(--dur-fast),
+    transform var(--dur-fast);
+}
+
+.social-link:hover {
+  background: var(--forest);
+  border-color: var(--champagne);
+  color: var(--champagne);
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ── Subtle large typography watermark: HYDERABAD ──────────────── */
+.footer-watermark {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 13vw, 11rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.035);
+  user-select: none;
+  pointer-events: none;
+  padding-top: clamp(1.5rem, 3vw, 3rem);
+  margin-bottom: -0.2em;
+  z-index: 1;
+}
+
+/* ── Bottom bar ──────────────────────────────────── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.40);
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.50);
+  text-decoration: none;
+  transition: color var(--dur-fast);
+}
+
+.footer-bottom a:hover {
+  color: var(--champagne);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

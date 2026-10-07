@@ -1,0 +1,171 @@
+/* =====================================================
+   AARAV CLINICS — Buttons
+   Theme: WARM MEDICAL LUXURY
+   ===================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-md); /* Refined, architectural corners rather than generic pills */
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition:
+    transform var(--dur-normal) var(--ease-spring),
+    box-shadow var(--dur-normal) var(--ease-out),
+    background var(--dur-normal) var(--ease-out),
+    color var(--dur-normal) var(--ease-out),
+    border-color var(--dur-normal) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
+}
+
+/* Arrow / SVG icon animation */
+.btn svg {
+  flex-shrink: 0;
+  transition: transform var(--dur-normal) var(--ease-spring);
+}
+
+.btn:hover svg.btn-arrow,
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── Primary Button (Deep Forest Luxury) ──────────── */
+.btn-primary {
+  background: var(--forest);
+  color: var(--white);
+  border-color: var(--forest);
+  box-shadow: 0 4px 16px rgba(23, 74, 70, 0.20);
+}
+
+.btn-primary:hover {
+  background: var(--forest-light);
+  color: var(--white);
+  border-color: var(--forest-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(23, 74, 70, 0.28);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(23, 74, 70, 0.16);
+}
+
+/* ── Secondary (Warm Outline) ─────────────────────── */
+.btn-secondary {
+  background: var(--white);
+  color: var(--forest);
+  border: 1.5px solid var(--forest);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+  background: var(--forest-faint);
+  color: var(--forest-dark);
+  border-color: var(--forest-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:active { transform: translateY(0); }
+
+/* ── Champagne Accent Button ──────────────────────── */
+.btn-champagne {
+  background: var(--champagne);
+  color: var(--white);
+  border-color: var(--champagne);
+  box-shadow: 0 4px 16px rgba(198, 164, 106, 0.25);
+}
+
+.btn-champagne:hover {
+  background: var(--champagne-hover);
+  border-color: var(--champagne-hover);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(198, 164, 106, 0.35);
+}
+
+/* ── Ghost / Glass (Over Dark/Photo Backgrounds) ──── */
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.40);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-2px);
+}
+
+/* ── Ghost Dark (Over Light Backgrounds) ──────────── */
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--forest);
+  border: 1.5px solid var(--border-mid);
+}
+
+.btn-ghost-dark:hover {
+  background: var(--sage-pale);
+  color: var(--forest-dark);
+  border-color: var(--sage);
+  transform: translateY(-2px);
+}
+
+/* ── WhatsApp ─────────────────────────────────────── */
+.btn-whatsapp {
+  background: #128C7E;
+  color: var(--white);
+  border-color: #128C7E;
+  box-shadow: 0 4px 14px rgba(18, 140, 126, 0.24);
+}
+
+.btn-whatsapp:hover {
+  background: #075E54;
+  border-color: #075E54;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 140, 126, 0.34);
+}
+
+/* ── Sizes ────────────────────────────────────────── */
+.btn--sm {
+  padding: 0.60rem 1.35rem;
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  padding: 1.05rem 2.35rem;
+  font-size: var(--text-md);
+  border-radius: var(--radius-md);
+}
+
+.btn--xl {
+  padding: 1.20rem 2.75rem;
+  font-size: var(--text-lg);
+  border-radius: var(--radius-md);
+}
+
+.btn--block {
+  width: 100%;
+}

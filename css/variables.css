@@ -1,0 +1,157 @@
+/* =====================================================
+   AARAV CLINICS — Design System Variables V2
+   Theme: WARM MEDICAL LUXURY
+   ===================================================== */
+
+:root {
+  /* ── Core Brand Palette ─────────────────────────── */
+  --ivory:         #FBFAF6; /* Warm Ivory page base */
+  --ivory-warm:    #F6F3EB; /* Slightly deeper ivory for alternating sections */
+  --forest:        #174A46; /* Deep Forest brand anchor */
+  --forest-dark:   #0F3330; /* Near-black forest */
+  --forest-mid:    #1D5954; /* Mid forest */
+  --forest-light:  #266E68; /* Hover & interactive forest */
+  --forest-faint:  rgba(23, 74, 70, 0.06);
+
+  --sage:          #8EAEA2; /* Soft Sage accent */
+  --sage-pale:     #EEF4F0; /* Pale Sage background */
+  --sage-light:    #DFEAE4; /* Delicate sage border/pill */
+  --sage-glow:     rgba(142, 174, 162, 0.20);
+
+  --sand:          #E9E1D4; /* Warm Sand divider / warm neutral */
+  --sand-light:    #F5EFE6; /* Subtle warm container */
+
+  --champagne:     #C6A46A; /* Restrained Champagne luxury accent */
+  --champagne-light:#F7F2E7; /* Soft champagne pill bg */
+  --champagne-hover:#B59257;
+
+  --charcoal:      #243331; /* Deep charcoal for headlines */
+  --white:         #FFFFFF; /* Pure white */
+
+  /* ── Functional Background Mappings ─────────────── */
+  --bg-page:       var(--ivory);
+  --bg-surface:    var(--white);
+  --bg-surface-alt:var(--sage-pale);
+  --surface:       var(--white);
+
+  /* ── Text ──────────────────────────────────────── */
+  --text-heading:  var(--forest-dark);
+  --text-body:     #2D3F3D;
+  --text-muted:    #5E7370;
+  --text-faint:    #8C9F9C;
+  --text-inverse:  #FFFFFF;
+  --text-accent:   var(--champagne);
+
+  /* ── Borders ───────────────────────────────────── */
+  --border-light:  rgba(23, 74, 70, 0.08);
+  --border-mid:    rgba(23, 74, 70, 0.16);
+  --border-card:   rgba(23, 74, 70, 0.08);
+  --border-focus:  var(--forest);
+
+  /* ── Shadows ───────────────────────────────────── */
+  --shadow-xs:     0 1px 3px rgba(23, 74, 70, 0.04);
+  --shadow-sm:     0 2px 8px rgba(23, 74, 70, 0.06);
+  --shadow-md:     0 6px 24px rgba(23, 74, 70, 0.08);
+  --shadow-lg:     0 12px 40px rgba(23, 74, 70, 0.10);
+  --shadow-xl:     0 20px 60px rgba(23, 74, 70, 0.12);
+  --shadow-forest: 0 8px 30px rgba(23, 74, 70, 0.18);
+  --shadow-champagne: 0 8px 24px rgba(198, 164, 106, 0.20);
+
+  /* ── Gradients ─────────────────────────────────── */
+  --grad-hero:     linear-gradient(145deg, rgba(15, 51, 48, 0.88) 0%, rgba(23, 74, 70, 0.78) 55%, rgba(36, 51, 49, 0.85) 100%);
+  --grad-forest:   linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%);
+  --grad-soft:     linear-gradient(180deg, var(--ivory) 0%, var(--sage-pale) 100%);
+  --grad-card:     linear-gradient(145deg, #FFFFFF 0%, #FAFAF7 100%);
+  --grad-champagne:linear-gradient(135deg, var(--champagne) 0%, #AF8D53 100%);
+
+  /* ── Typography ────────────────────────────────── */
+  --font-display:  'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-primary:  'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Type Scale — fluid clamp */
+  --text-xs:   clamp(0.72rem, 0.85vw, 0.78rem);
+  --text-sm:   clamp(0.84rem, 0.95vw, 0.88rem);
+  --text-base: clamp(0.96rem, 1.05vw, 1.02rem);
+  --text-md:   clamp(1.06rem, 1.2vw, 1.15rem);
+  --text-lg:   clamp(1.18rem, 1.4vw, 1.30rem);
+  --text-xl:   clamp(1.35rem, 1.8vw, 1.55rem);
+  --text-2xl:  clamp(1.60rem, 2.3vw, 1.95rem);
+  --text-3xl:  clamp(1.95rem, 2.9vw, 2.45rem);
+  --text-4xl:  clamp(2.40rem, 3.8vw, 3.25rem);
+  --text-5xl:  clamp(2.95rem, 4.8vw, 4.20rem);
+  --text-hero: clamp(3.20rem, 6.0vw, 5.25rem);
+
+  /* Line heights */
+  --leading-tight:  1.12;
+  --leading-snug:   1.28;
+  --leading-normal: 1.60;
+  --leading-loose:  1.80;
+
+  /* Letter spacing */
+  --tracking-tight:  -0.03em;
+  --tracking-normal: -0.01em;
+  --tracking-wide:   0.06em;
+  --tracking-wider:  0.14em;
+
+  /* ── Spacing ───────────────────────────────────── */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-5:   1.25rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-10:  2.5rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+  --space-20:  5rem;
+  --space-24:  6rem;
+  --space-32:  8rem;
+
+  /* ── Layout ────────────────────────────────────── */
+  --wrap-max:       1280px;
+  --wrap-narrow:    840px;
+  --wrap-wide:      1440px;
+  --wrap-padding:   clamp(1.25rem, 4vw, 3rem);
+
+  /* ── Border Radius ─────────────────────────────── */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   22px;
+  --radius-xl:   30px;
+  --radius-2xl:  44px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ───────────────────────────────── */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    180ms;
+  --dur-normal:  280ms;
+  --dur-slow:    420ms;
+  --dur-xslow:   600ms;
+
+  /* ── Z-index ───────────────────────────────────── */
+  --z-below:  -1;
+  --z-base:    0;
+  --z-raised:  10;
+  --z-float:   50;
+  --z-nav:    100;
+  --z-modal:  200;
+  --z-toast:  300;
+
+  /* ── Navbar ────────────────────────────────────── */
+  --navbar-h: 76px;
+  --navbar-h-scroll: 68px;
+}
+
+/* ── Reduced Motion ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast:   0ms;
+    --dur-normal: 0ms;
+    --dur-slow:   0ms;
+    --dur-xslow:  0ms;
+  }
+}
